@@ -120,59 +120,6 @@ export default Vue.extend({
           this.error = err.response?.data;
         });
     },
-
-    loginJWT() {
-      this.error = null;
-
-      return this.$auth
-        .loginWith("laravelJWT", {
-          data: {
-            email: "test@test.com",
-            password: "12345678",
-          },
-        })
-        .catch((e) => {
-          this.error = e.response ? e.response.data : e.toString();
-        });
-    },
-
-    loginPassport() {
-      this.error = null;
-
-      return this.$auth.loginWith("laravelPassport").catch((e) => {
-        this.error = e.response ? e.response.data : e.toString();
-      });
-    },
-
-    loginPassportGrantFlow() {
-      this.error = null;
-
-      return this.$auth
-        .loginWith("laravelPassportPassword", {
-          data: {
-            username: "test@test.com",
-            password: "12345678",
-          },
-        })
-        .catch((e) => {
-          this.error = e.response ? e.response.data.message : e.toString();
-        });
-    },
-
-    loginSanctum() {
-      this.error = null;
-
-      return this.$auth
-        .loginWith("laravelSanctum", {
-          data: {
-            email: "test@test.com",
-            password: "12345678",
-          },
-        })
-        .catch((e) => {
-          this.error = e.response ? e.response.data : e.toString();
-        });
-    },
   },
 });
 </script>

@@ -9,6 +9,8 @@
           <b-nav-item to="/" exact> Home </b-nav-item>
           <b-nav-item to="/public"> Public </b-nav-item>
           <b-nav-item to="/secure"> Secure </b-nav-item>
+          <b-nav-item to="/manager1"> Manager1 </b-nav-item>
+          <b-nav-item to="/manager2"> Manager2 </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <template v-if="$auth.$state.loggedIn">

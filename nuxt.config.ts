@@ -1,5 +1,4 @@
 import { NuxtConfig } from "@nuxt/types";
-import oidcMockServer from "./api/oidcmockserver";
 
 export default <NuxtConfig>{
   build: {
